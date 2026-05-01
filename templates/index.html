@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            width: 400px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 95%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #007bff;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>🩺 Diabetes Prediction AI</h2>
+
+    <form action="/predict" method="post">
+
+        <input type="number" name="1" placeholder="Pregnancies">
+        <input type="number" name="2" placeholder="Glucose">
+        <input type="number" name="3" placeholder="Blood Pressure">
+        <input type="number" name="4" placeholder="Skin Thickness">
+        <input type="number" name="5" placeholder="Insulin">
+        <input type="number" name="6" placeholder="BMI">
+        <input type="number" name="7" placeholder="Diabetes Pedigree">
+        <input type="number" name="8" placeholder="Age">
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</div>
+
+</body>
+</html>
